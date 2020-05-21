@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir "${HOME}/.ssh"
+mkdir -p "${HOME}/.ssh"
 gpg --quiet --batch --yes --decrypt --passphrase=${AVN_GPG_PASSWORD} --output .github/avereon.keystore .github/avereon.keystore.gpg
 gpg --quiet --batch --yes --decrypt --passphrase=${AVN_GPG_PASSWORD} --output $HOME/.ssh/id_rsa .github/id_rsa.gpg
 gpg --quiet --batch --yes --decrypt --passphrase=${AVN_GPG_PASSWORD} --output $HOME/.ssh/id_rsa.pub .github/id_rsa.pub.gpg
