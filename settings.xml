@@ -37,9 +37,9 @@
 <!--		</mirror>-->
 	</mirrors>
 
-	<activeProfiles>
-		<activeProfile>signjar</activeProfile>
-	</activeProfiles>
+<!--	<activeProfiles>-->
+<!--		<activeProfile>signjar</activeProfile>-->
+<!--	</activeProfiles>-->
 
 	<profiles>
 		<profile>
