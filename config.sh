@@ -20,6 +20,6 @@ echo "Build date=$(date)"
 echo "GITHUB_REF=${GITHUB_REF}"
 echo "PRODUCT_DEPLOY_PATH=${PRODUCT_DEPLOY_PATH}"
 
-echo "::set-env name=JAVADOC_DEPLOY_PATH::/opt/avn/store/latest/${AVN_PRODUCT}"
-echo "::set-env name=JAVADOC_TARGET_PATH::/opt/avn/web/product/${AVN_PRODUCT}/javadoc"
-echo "::set-env name=PRODUCT_DEPLOY_PATH::${PRODUCT_DEPLOY_PATH}"
+echo "JAVADOC_DEPLOY_PATH=/opt/avn/store/latest/${AVN_PRODUCT}" >> $GITHUB_ENV
+echo "JAVADOC_TARGET_PATH=/opt/avn/web/product/${AVN_PRODUCT}/javadoc" >> $GITHUB_ENV
+echo "PRODUCT_DEPLOY_PATH=${PRODUCT_DEPLOY_PATH}" >> $GITHUB_ENV
