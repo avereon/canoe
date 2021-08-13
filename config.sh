@@ -14,15 +14,14 @@ case "${GITHUB_REF}" in
   "refs/heads/main") AVN_RELEASE="latest" ;;
   "refs/heads/stable") AVN_RELEASE="stable" ;;
 esac
-
-export JAVA_DISTRO='adopt'
-export JAVA_PACKAGE='jdk'
 export PRODUCT_DEPLOY_PATH=/opt/avn/store/${AVN_RELEASE}/${AVN_PRODUCT}
 
 echo "Build date=$(date)"
 echo "GITHUB_REF=${GITHUB_REF}"
 echo "PRODUCT_DEPLOY_PATH=${PRODUCT_DEPLOY_PATH}"
 
+echo "JAVA_DISTRO='adopt'" >> $GITHUB_ENV
+echo "JAVA_PACKAGE='jdk'" >> $GITHUB_ENV
 echo "JAVADOC_DEPLOY_PATH=/opt/avn/store/latest/${AVN_PRODUCT}" >> $GITHUB_ENV
 echo "JAVADOC_TARGET_PATH=/opt/avn/web/product/${AVN_PRODUCT}/javadoc" >> $GITHUB_ENV
 echo "PRODUCT_DEPLOY_PATH=${PRODUCT_DEPLOY_PATH}" >> $GITHUB_ENV
