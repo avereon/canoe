@@ -9,11 +9,14 @@ chmod 600 "${HOME}/.ssh/id_rsa"
 chmod 600 "${HOME}/.ssh/id_rsa.pub"
 chmod 600 "${HOME}/.ssh/known_hosts"
 
-#AVN_RELEASE is derived from github.ref, example values: refs/heads/main, refs/heads/stable
+#AVN_RELEASE is derived from GITHUB_REF, example values: refs/heads/main, refs/heads/stable
 case "${GITHUB_REF}" in
   "refs/heads/main") AVN_RELEASE="latest" ;;
   "refs/heads/stable") AVN_RELEASE="stable" ;;
 esac
+
+export JAVA_DISTRO='adopt'
+export JAVA_PACKAGE='jdk'
 export PRODUCT_DEPLOY_PATH=/opt/avn/store/${AVN_RELEASE}/${AVN_PRODUCT}
 
 echo "Build date=$(date)"
