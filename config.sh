@@ -20,7 +20,7 @@ echo "Build date=$(date)"
 echo "GITHUB_REF=${GITHUB_REF}"
 echo "PRODUCT_DEPLOY_PATH=${PRODUCT_DEPLOY_PATH}"
 
-echo "JAVA_DISTRO=adopt" >> $GITHUB_ENV
+echo "JAVA_DISTRO=temurin" >> $GITHUB_ENV
 echo "JAVA_PACKAGE=jdk" >> $GITHUB_ENV
 echo "JAVADOC_DEPLOY_PATH=/opt/avn/store/latest/${AVN_PRODUCT}" >> $GITHUB_ENV
 echo "JAVADOC_TARGET_PATH=/opt/avn/web/product/${AVN_PRODUCT}/javadoc" >> $GITHUB_ENV
